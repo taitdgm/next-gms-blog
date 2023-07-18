@@ -3,6 +3,7 @@
 import { notFound } from "next/navigation";
 import { allPosts } from "contentlayer/generated";
 import { Mdx } from "@/components/mdx-components";
+import Container from "@/components/Container";
 
 interface PostProps {
   params: {
@@ -20,7 +21,7 @@ export default function PostPage({ params }: PostProps) {
   }
 
   return (
-    <article className="py-6 prose dark:prose-invert">
+    <article className="py-6">
       <h1 className="mb-2">{post.title}</h1>
       {post.description && (
         <p className="text-xl mt-0 text-slate-700 dark:text-slate-200">
